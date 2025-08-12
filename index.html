@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>С Днём Рождения, Кариша!</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+  }
+  .container {
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+  }
+  input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ff6f91;
+    border-radius: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 16px;
+  }
+  button {
+    background: #ff6f91;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button:hover {
+    background: #ff3f6e;
+  }
+  .message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Введите пароль 💖</h2>
+  <input type="text" id="password" placeholder="Пароль" />
+  <br />
+  <button onclick="checkPassword()">Войти</button>
+  <div class="message" id="message"></div>
+</div>
+
+<script>
+  function checkPassword() {
+    let pass = document.getElementById("password").value.trim();
+    let message = document.getElementById("message");
+
+    switch(pass) {
+      case "audi":
+        message.innerHTML = "люблю";
+        break;
+      case "Карие":
+        message.innerHTML = "свою Каришу";
+        break;
+      case "Джизус":
+        message.innerHTML = "ещё чучуть";
+        break;
+      case "13.08":
+        message.innerHTML = "ты у меня самая лучшая";
+        break;
+      case "Лилии":
+        message.innerHTML = `Кариша! 🌸 Сегодня твой день, и я хочу, чтобы ты знала — он особенный не только потому, что ты родилась, а потому, что с твоим появлением в мире стало гораздо больше тепла, улыбок и света. ✨<br><br>
+        Ты как солнечный лучик, который даже в самый пасмурный день умеет согреть. Как весенний ветер, приносящий свежесть и радость. Как звёздочка на небе, которая светит ярче всех. ⭐<br><br>
+        Пусть каждый твой день будет наполнен счастьем, мечтами, которые сбываются, и маленькими чудесами. Я горжусь тем, что ты есть в моей жизни. ❤️<br><br>
+        🎉 С Днём рождения, Кариша! 🎉`;
+        break;
+      default:
+        message.innerHTML = "Неверный пароль ❌";
+    }
+  }
+</script>
+</body>
+</html>
